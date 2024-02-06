@@ -16,7 +16,7 @@ const AboveTheFold: React.FC = () => {
         Having a especial coffe is everyone's dream. <br />
         Have you owned your dream coffe?
       </p>
-      <Button title="Products" />
+      <Button title="Products" onClick={()=>{alert('PRODUTOS')}}/>
     </section>
   );
 };

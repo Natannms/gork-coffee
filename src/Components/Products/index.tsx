@@ -64,7 +64,7 @@ const Products = () => {
             title: "Ethiopian Citrus Delight"
           }
     ])
-
+    
     return (
         <div className="py-20 flex flex-col justify-center  items-center text-black font-bold">
             <h1 className="text-3xl font-normal  uppercase" style={{letterSpacing:30}}>Products</h1>

@@ -12,13 +12,6 @@ const Cart = () => {
              :
              ''
            }
-             {/* Aqui você pode mapear os itens do carrinho e exibi-los */}
-          {cartContext.items.map((item) => (
-            <div key={item.id}>
-              <p>{item.title}</p>
-              {/* Adicione outros campos que você deseja exibir */}
-            </div>
-          ))}
         </div>
     );  
 

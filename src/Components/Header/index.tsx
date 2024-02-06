@@ -10,7 +10,7 @@ const Header = () => {
                 Gork Coffee
             </div>
             <Navigation />
-            <Cart Qtd={2}/>
+            <Cart />
         </div>
     );  
 

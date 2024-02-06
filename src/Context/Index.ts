@@ -1,25 +1,17 @@
 import { create } from 'zustand'
 import { IProductSelected } from '../types/Product';
 interface ICartStore {
-    items:IProductSelected[],
+    items:IProductSelected[]
     addItem: (item:IProductSelected) => void
     update: (items:IProductSelected[]) => void
+    isModalVisible:boolean,
+    toggleModal: (value:boolean)=> void
 }
 
 export const cartStore = create<ICartStore>((set) => ({
     items: [],
+    isModalVisible: false,
     addItem: (item: IProductSelected) => set((state) => ({ items: [...state.items, item] })),
     update: (items:IProductSelected[]) => set(() => ({ items: items })),
+    toggleModal: (value:boolean) => set(()=> ({isModalVisible: value}))
 }));
-
-// export const useModalAuthStore =  create((set)=> ({
-//     isVisible: false,
-//     form:'login',
-//     toggleModal: (item, form)=> set(()=>({isVisible: !item, form:form})),
-//     manualShowModal: (item, form)=> set(()=>({isVisible: item, form:form}))
-// }));
-
-// export const useUserStore = create((set) => ({
-//     data: null,
-//     updateUser: (item) => set(() => ({ data: item })),
-// }));

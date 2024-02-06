@@ -3,6 +3,7 @@ import Button from "../Button";
 import Rating from '../Rating'
 import { cartStore } from '../../Context/Index'
 import { ChangeEvent, useState } from "react";
+import { toast } from "react-toastify";
 
 const ProductItem = ({ image, title, rating, price, category, description, id, }: IProduct) => {
     const truncatedTitle: string = title.length > 20 ? title.substring(0, 20) + "..." : title;
@@ -13,7 +14,7 @@ const ProductItem = ({ image, title, rating, price, category, description, id, }
         const existingProductIndex = cartContext.items.findIndex(item => item.id === product.id);
         
         if(existingProductIndex == -1){
-            cartContext.addItem({ image, title, rating, price, category, description, id, quantity:qtd })
+            cartContext.addItem(product)
         }else{
             const updatedCart = [...cartContext.items];
             updatedCart[existingProductIndex].quantity += qtd;
@@ -38,7 +39,12 @@ const ProductItem = ({ image, title, rating, price, category, description, id, }
                 <h3 className="text-4xl text-right">$ {price}</h3>
                 <div className="flex justify-between">
                     <Button title="Buy" onClick={() => {
-                        addItensInCart({ image, title, rating, price, category, description, id, quantity:qtd })
+                        if(qtd == 0){
+                            addItensInCart({ image, title, rating, price, category, description, id, quantity:1 })
+                        }else{
+                            addItensInCart({ image, title, rating, price, category, description, id, quantity:qtd })
+                        }
+                        toast('Item adicionado ao carrinho !', {autoClose:2000});
                     }} />
                     <input
                         type="number"

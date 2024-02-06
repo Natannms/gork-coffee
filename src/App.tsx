@@ -8,7 +8,6 @@ function App() {
     <div  className="text-white">
        <Header />
        <AboveTheFold />
-       {/* <FeaturedProduct /> */}
        <Products />
     </div>
   )

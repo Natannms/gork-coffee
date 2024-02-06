@@ -1,4 +1,3 @@
-import React from "react";
 import { GoStarFill } from "react-icons/go";
 import { IRating } from "../../types/Rating";
 

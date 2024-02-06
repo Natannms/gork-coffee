@@ -1,10 +1,15 @@
 import { MdShoppingCart } from "react-icons/md";
 import { cartStore } from '../../Context/Index'
+import { toast } from 'react-toastify';
 
 const Cart = () => {
   const cartContext = cartStore();
   const showModal = () => {
-    cartContext.toggleModal(!cartContext.isModalVisible)
+    if(cartContext.items.length > 0){
+      cartContext.toggleModal(!cartContext.isModalVisible)
+    }else{
+     toast('Não existem produtos em seu carrinho !',{autoClose:3000});
+    }
   }
 
   function calculateQuantityItens(): number {

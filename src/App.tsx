@@ -16,7 +16,7 @@ function App() {
         <CartResume />
       }
       <AboveTheFold />
-       <Products />
+      <Products />
     </div>
   )
 }

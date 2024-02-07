@@ -87,26 +87,26 @@ const CheckoutForm = () => {
 
 
     return (
-        <div className='flex'>
-            <div className='flex flex-col gap-4 p-10'>
+        <div className='flex lg:flex-row flex-col justify-center lg:items-start items-center'>
+            <div className='flex flex-col gap-4 lg:p-10'>
                 <h2 className='text-black font-medium text-1xl'>
                     SHIPPING & BILLING INFORMATION
                 </h2>
-                <TextField value={name} onChange={handleChangeName} className='w-96' id="outlined-name" label="Name" variant="outlined" />
-                <TextField value={email} onChange={handleChangeEmail} className='w-96' id="outlined-email" label="Email" variant="outlined" />
-                <TextField value={address} onChange={handleChangeAddress} className='w-96' id="outlined-address" label="Address" variant="outlined" />
-                <TextField value={city} onChange={handleChangeCity} className='w-96' id="outlined-city" label="City" variant="outlined" />
-                <TextField value={state} onChange={handleChangeState} className='w-96' id="outlined-state" label="State" variant="outlined" />
-                <TextField value={zip} onChange={handleChangeZip} className='w-96' id="outlined-zip" label="Zip Code" variant="outlined" />
-                <TextField value={country} onChange={handleChangeCountry} className='w-96' id="outlined-country" label="Country" variant="outlined" />
+                <TextField value={name} onChange={handleChangeName} className='md:w-96' id="outlined-name" label="Name" variant="outlined" />
+                <TextField value={email} onChange={handleChangeEmail} className='md:w-96' id="outlined-email" label="Email" variant="outlined" />
+                <TextField value={address} onChange={handleChangeAddress} className='md:w-96' id="outlined-address" label="Address" variant="outlined" />
+                <TextField value={city} onChange={handleChangeCity} className='md:w-96' id="outlined-city" label="City" variant="outlined" />
+                <TextField value={state} onChange={handleChangeState} className='md:w-96' id="outlined-state" label="State" variant="outlined" />
+                <TextField value={zip} onChange={handleChangeZip} className='md:w-96' id="outlined-zip" label="Zip Code" variant="outlined" />
+                <TextField value={country} onChange={handleChangeCountry} className='md:w-96' id="outlined-country" label="Country" variant="outlined" />
             </div>
             <div className='flex flex-col gap-4 p-10'>
                 <h2 className='text-black font-medium text-1xl'>
                     PAYMENT INFORMATION
                 </h2>
-                <TextField onChange={handleChangeCard} value={card} className='w-96' id="outlined-card" label="Card" variant="outlined" />
-                <TextField onChange={handleChangeDate} value={date} className='w-96' id="outlined-date" label="Date" variant="outlined" />
-                <TextField onChange={handleChangeCode} value={code} className='w-96' id="outlined-code" label="Code" variant="outlined" />
+                <TextField onChange={handleChangeCard} value={card} className='md:w-96' id="outlined-card" label="Card" variant="outlined" />
+                <TextField onChange={handleChangeDate} value={date} className='md:w-96' id="outlined-date" label="Date" variant="outlined" />
+                <TextField onChange={handleChangeCode} value={code} className='md:w-96' id="outlined-code" label="Code" variant="outlined" />
 
                 {!isLoading ?
                     <>

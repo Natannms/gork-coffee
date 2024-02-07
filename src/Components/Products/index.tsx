@@ -66,9 +66,9 @@ const Products = () => {
     ])
     
     return (
-        <div className="py-20 flex flex-col justify-center  items-center text-black font-bold">
-            <h1 className="text-3xl font-normal  uppercase" style={{letterSpacing:30}}>Products</h1>
-            <ul className="w-full px-8 py-20 flex gap-4 flex-wrap">
+        <div className="py-20 flex flex-col justify-center  items-center text-black font-bold ">
+            <h1 className="text-3xl font-normal  uppercase tracking-[20px] md:tracking-[40px]" >Products</h1>
+            <ul className="w-full px-8 lg:pl-40 md:pl-40 py-20 flex gap-4 flex-wrap ">
                 {products.map(product => (
                     <ProductItem
                         title={product.title}

@@ -1,4 +1,3 @@
-import { ToastContainer } from 'react-toastify';
 import logo from '../../assets/imgs/logo/coffee-logo.png'
 import Cart from '../Cart';
 import Navigation from '../Navigation';
@@ -11,7 +10,7 @@ const Header = () => {
                 Gork Coffee
             </div>
             <Navigation />
-            <ToastContainer />
+            
             <Cart />
         </div>
     );  
